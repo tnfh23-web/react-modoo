@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../styles/SURO.css";
-import { suroAnimation } from "../animations/SuroAnimation";
+import { suroAnimation } from "../animations/suroAnimation";
 
 function Suro() {
   const suroRef = useRef(null);

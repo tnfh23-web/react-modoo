@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import "../styles/GYU.css";
-import { gyuAnimation } from "../animations/GyuAnimation";
+import { gyuAnimation } from "../animations/gyuAnimation";
 
 function Gyu() {
   const gyuRef = useRef(null);
