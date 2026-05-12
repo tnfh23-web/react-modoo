@@ -3,7 +3,6 @@ import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Gyu from "./pages/Gyu";
 import Suro from "./pages/Suro";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -32,7 +31,6 @@ function App() {
 
   return (
     <>
-      <Gyu />
       <Suro />
     </>
   );
