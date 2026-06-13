@@ -97,8 +97,8 @@ function Contact() {
                 <span className="en">Solution</span>
               </label>
             </div>
-            <div className="form-cen-box">
-              <div className="cen-list-box cen-list-box-1 flex" data-aos="fade-up" data-aos-delay="150">
+            <div className="form-cen-box" data-aos="fade-up" data-aos-delay="150">
+              <div className="cen-list-box cen-list-box-1 flex">
                 <div className="cen-list cen-list-1">
                   <div className="text-box">
                     <p>회사명 / 성명</p>
@@ -112,7 +112,7 @@ function Contact() {
                   <input className="input-text input-text-2" type="text" placeholder="업종" />
                 </div>
               </div>
-              <div className="cen-list-box cen-list-box-2 flex" data-aos="fade-up" data-aos-delay="300">
+              <div className="cen-list-box cen-list-box-2 flex">
                 <div className="cen-list cen-list-1">
                   <div className="text-box">
                     <p>연락처</p>
@@ -126,7 +126,7 @@ function Contact() {
                   <input className="input-text input-text-2" type="text" placeholder="이메일" />
                 </div>
               </div>
-              <div className="cen-list-box cen-list-box-3 flex" data-aos="fade-up" data-aos-delay="450">
+              <div className="cen-list-box cen-list-box-3 flex">
                 <div className="cen-list cen-list-1">
                   <div className="text-box">
                     <p>예산</p>
@@ -141,7 +141,7 @@ function Contact() {
                 </div>
               </div>
             </div>
-            <div className="form-last-box" data-aos="fade-up" data-aos-delay="600">
+            <div className="form-last-box" data-aos="fade-up" data-aos-delay="300">
               <div className="last-list flex flex-col">
                 <div className="text-box">
                   <p>문의 내용</p>
