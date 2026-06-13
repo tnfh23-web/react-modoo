@@ -1,0 +1,22 @@
+.divider .text-marquee-box {
+  width: 100%;
+  overflow: hidden;
+  margin: 8rem 0;
+}
+
+.divider .text-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+.divider .text-marquee-track span {
+  font-size: 8rem;
+  background: linear-gradient(90deg, #fff 0%, #999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-right: 6rem;
+}
+.divider .text-marquee-track span:hover {
+  background: none;
+  -webkit-text-fill-color: #fff;
+}

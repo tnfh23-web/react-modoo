@@ -1,0 +1,51 @@
+.footer-grid {
+  max-width: var(--maxwidth);
+  margin: var(--cen);
+  display: flex;
+  justify-content: space-between;
+  padding: 8rem 0;
+}
+.footer-grid .logo-box {
+  width: 22.3rem;
+  height: 4rem;
+  margin-bottom: 6rem;
+}
+.footer-grid .left-box .text-box-top {
+  margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.footer-grid .left-box .text-box {
+  display: flex;
+  gap: 1.6rem;
+}
+.footer-grid .left-box .text-box p {
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.footer-grid .left-box .text-box span {
+  font-weight: 600;
+}
+.footer-grid .left-box .text-box-bottom p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--white-80);
+  opacity: 0.7;
+}
+.footer-grid .right-box {
+  display: flex;
+  align-items: end;
+  gap: 1.5rem;
+}
+.footer-grid .right-box a {
+  width: 5rem;
+  height: 5rem;
+  transition: all 0.3s;
+}
+.footer-grid .right-box a:hover {
+  transform: translateY(-0.3rem);
+}
+.footer-grid .right-box a:hover img {
+  opacity: 0.7;
+}

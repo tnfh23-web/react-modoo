@@ -15,6 +15,7 @@
   /* grid */
 
   --maxwidth: 168rem;
+  --cen: 0 auto;
 
   /* font */
   --font-kr: "Pretendard", sans-serif;

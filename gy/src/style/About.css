@@ -1,0 +1,156 @@
+.about-section {
+  height: 100vh;
+  background-color: var(--black-100);
+}
+
+.about-grid {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--black-100);
+}
+
+.about-section .about-text-box {
+  position: absolute;
+  top: 36.5%;
+  left: 50%;
+  width: 126rem;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.about-section .about-text-box p {
+  line-height: 1.38;
+  white-space: nowrap;
+}
+
+.about-section .about-text-line {
+  position: relative;
+  display: block;
+}
+
+.about-section .about-text-base,
+.about-section .about-text-fill {
+  display: block;
+}
+
+.about-section .about-text-base {
+  color: rgba(255, 255, 255, 0.34);
+}
+
+.about-section .about-text-fill {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  color: var(--white-100);
+  will-change: clip-path;
+}
+
+.about-section .about-word {
+  display: inline;
+}
+
+.about-section .about-word.bold {
+  font-size: 5.6rem;
+  font-weight: 700;
+}
+
+.about-section .about-word.light {
+  font-size: 4.8rem;
+  font-weight: 500;
+}
+
+.about-section .about-portfolio-box {
+  position: absolute;
+  left: 50%;
+  top: 67.5%;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.8rem;
+  height: 25rem;
+  transform: translateX(-0.2rem);
+  z-index: 2;
+}
+
+.about-section .about-bar {
+  position: relative;
+  width: 0.2rem;
+  height: 25rem;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+.about-section .about-bar-fill {
+  position: absolute;
+  inset: 0;
+  display: block;
+  transform: scaleY(0);
+  transform-origin: top center;
+  background-color: var(--white-100);
+}
+
+.about-section .about-link-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  padding-top: 13.2rem;
+}
+
+.about-section .about-link-box span {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--white-100);
+}
+
+.about-section .arrow-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  padding-left: 2.4rem;
+}
+
+.about-section .arrow-box img {
+  object-fit: contain;
+}
+
+.about-section .arrow-box .arrow-big {
+  width: 2rem;
+  height: 2rem;
+}
+
+.about-section .arrow-box .arrow-small {
+  width: 1.4rem;
+  height: 1.4rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 1024px) {
+  .about-section .about-text-box {
+    top: 34%;
+    width: calc(100% - 4.8rem);
+  }
+
+  .about-section .about-text-box p {
+    white-space: normal;
+  }
+
+  .about-section .about-word.bold {
+    font-size: 4rem;
+  }
+
+  .about-section .about-word.light {
+    font-size: 3.4rem;
+  }
+
+  .about-section .about-portfolio-box {
+    height: 22rem;
+  }
+
+  .about-section .about-bar {
+    height: 22rem;
+  }
+}

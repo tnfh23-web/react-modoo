@@ -1,0 +1,36 @@
+video {
+  width: 35rem;
+  height: 35rem;
+  object-fit: cover;
+  display: block;
+  border-radius: 9999rem;
+}
+
+.strength-grid {
+  max-width: var(--maxwidth);
+  margin: var(--cen);
+  padding: 6rem 0;
+  gap: 8rem;
+}
+
+.strength-grid .strength-card {
+  opacity: 0.4;
+  align-items: center;
+  padding: 2.4rem 0;
+  gap: 12rem;
+}
+.strength-grid .strength-card .text-box {
+  flex: 1;
+}
+.strength-grid .strength-card .text-box .title {
+  font-size: 7.2rem;
+  font-weight: 600;
+  margin-bottom: 3.2rem;
+}
+.strength-grid .strength-card .text-box .text {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+.strength-grid .right {
+  text-align: right;
+}

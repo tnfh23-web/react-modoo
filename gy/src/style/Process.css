@@ -1,0 +1,110 @@
+.process-section {
+  padding: 12rem 0;
+}
+.process-grid {
+  max-width: var(--maxwidth);
+  margin: var(--cen);
+  gap: 16rem;
+}
+.process-section .left-box {
+  flex-shrink: 0;
+}
+.process-section .left-box .title {
+  font-size: 6.4rem;
+  font-weight: 600;
+}
+.process-section .left-box .text {
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 8rem;
+}
+.process-section .left-box .button-box .button {
+  padding: 2rem 4rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--white-100);
+  border-radius: 100vmax;
+  transition: all 0.3s;
+}
+.process-section .left-box .button-box .button:hover {
+  background-color: var(--white-100);
+  box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.15);
+}
+.process-section .left-box .button span {
+  font-size: 2.4rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.process-section .left-box .button:hover span {
+  color: var(--black-100);
+}
+.process-section .right-box {
+  flex: 1;
+  min-width: 0;
+  overflow: visible;
+  position: relative;
+}
+.process-section .swiper-pagination {
+  position: static;
+  padding-top: 4rem;
+}
+.process-section .swiper-pagination-bullet {
+  width: 1.1rem;
+  height: 1.1rem;
+  background-color: var(--white-100);
+  opacity: 0.5;
+}
+.process-section .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+.process-section .swiper {
+  width: 100%;
+  overflow: hidden;
+}
+.process-section .swiper-slide {
+  transition: all 0.3s;
+  opacity: 0.7;
+}
+
+.process-section .swiper-slide-active {
+  opacity: 1;
+}
+.process-section .swiper-slide img {
+  border-radius: 2rem;
+}
+.process-section .swiper-slide p {
+  margin: 1.8rem 0;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.process-section .swiper-slide p span {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.process-section .arrow_left,
+.process-section .arrow_right {
+  position: absolute;
+  top: 40%;
+
+  z-index: 999;
+  cursor: pointer;
+}
+.process-section .arrow_left {
+  transform: translate(-50%, -50%);
+  left: -3.5rem;
+}
+.process-section .arrow_right {
+  transform: translate(50%, -50%);
+  right: -3.5rem;
+}
+.process-section .arrow_left img:hover,
+.process-section .arrow_right img:hover {
+  transform: scale(1.04);
+  opacity: 1;
+}
+.process-section .arrow_left img,
+.process-section .arrow_right img {
+  width: 4.8rem;
+  opacity: 0.8;
+  transition: all 0.3s;
+}

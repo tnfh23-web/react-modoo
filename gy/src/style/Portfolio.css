@@ -1,0 +1,57 @@
+.portfolio-section .swiper-slide {
+  position: relative;
+  height: 100vh;
+}
+.portfolio-section .swiper-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+.portfolio-section .con-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.portfolio-section .text-box {
+  text-align: center;
+  margin-top: 20rem;
+}
+.portfolio-section .text-box p:nth-child(1) {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+.portfolio-section .text-box p:nth-child(2) {
+  font-size: 7.2rem;
+  font-weight: 700;
+  margin-bottom: 2.8rem;
+}
+.portfolio-section .text-box p:nth-child(3) {
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+.portfolio-section .button-box {
+  margin-top: 20rem;
+}
+.portfolio-section .button-box .button {
+  padding: 2rem 8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--white-100);
+  border-radius: 100vmax;
+  transition: all 0.3s;
+}
+.portfolio-section .button-box .button:hover {
+  background-color: var(--white-100);
+  box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.15);
+}
+.portfolio-section .button-box .button span {
+  font-size: 2.4rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.portfolio-section .button-box .button:hover span {
+  color: var(--black-100);
+}

@@ -1,0 +1,178 @@
+.contact-section {
+  padding: 12rem 0;
+}
+.contact-grid {
+  max-width: var(--maxwidth);
+  margin: var(--cen);
+}
+.contact-grid .left-box,
+.contact-grid .right-box {
+  width: 50%;
+}
+/* left-box */
+.contact-grid .left-top-box .title-box {
+  margin-bottom: 4rem;
+  width: fit-content;
+}
+.contact-grid .left-top-box .title-box .title {
+  font-weight: 700;
+  font-size: 7.2rem;
+}
+.contact-grid .left-top-box .text-box {
+  width: fit-content;
+}
+.contact-grid .left-top-box .text-box p:nth-child(1) {
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  font-size: 3.6rem;
+}
+.contact-grid .left-top-box .text-box p:nth-child(2) {
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+.left-bottom-box {
+  gap: 2.4rem;
+}
+.left-bottom-box .text-1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  margin-bottom: 1.8rem;
+}
+.left-bottom-box .text-2 {
+  font-weight: 500;
+  font-size: 3.6rem;
+}
+/* right-box */
+.contact-grid .right-box .form-top-box {
+  gap: 3rem;
+  padding-bottom: 2.8rem;
+  border-bottom: 2px solid var(--white-100);
+}
+.contact-grid .right-box .form-top-box .category-list {
+  gap: 1rem;
+  cursor: pointer;
+}
+.contact-grid .right-box .form-top-box .category-list span {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+.contact-grid .right-box .form-top-box input[type="radio"] {
+  position: relative;
+  width: 2.8rem;
+  height: 2.8rem;
+  box-sizing: border-box;
+  background-color: var(--white-100);
+  appearance: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+input[type="radio"]::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  background: var(--black-100);
+  transform: translate(-50%, -50%) scale(0);
+}
+
+input[type="radio"]:checked::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+.contact-grid .right-box .form-cen-box {
+  padding: 3.6rem 0;
+  border-bottom: 2px solid var(--white-100);
+}
+.contact-grid .cen-list-box {
+  gap: 2.4rem;
+  padding-bottom: 2.4rem;
+}
+.contact-grid .cen-list-box .cen-list {
+  width: 50%;
+}
+.contact-grid .cen-list-box .cen-list input {
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.contact-grid input:focus,
+.contact-grid textarea:focus {
+  border-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 0 0.4rem rgba(255, 255, 255, 0.08);
+}
+.contact-grid .cen-list-box .cen-list p {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+.contact-grid .cen-list-box .cen-list input::placeholder {
+  color: #a5a5a5;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.contact-grid .right-box .form-last-box {
+  padding-top: 3.6rem;
+}
+.contact-grid .right-box .form-last-box .last-list {
+  gap: 2rem;
+}
+.contact-grid .text-box p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.contact-grid .last-input-1 {
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.contact-grid .right-box .form-last-box .last-list input::placeholder {
+  color: #a5a5a5;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.contact-grid .textarea-1 {
+  resize: none;
+  box-sizing: border-box;
+  padding: 2rem;
+  height: 30rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.contact-grid .right-box .form-last-box .last-list textarea::placeholder {
+  color: #a5a5a5;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.contact-grid .right-box .form-last-box .button-box {
+  margin-top: 4rem;
+}
+.contact-grid .right-box .form-last-box .button {
+  display: flex;
+  padding: 2.6rem 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--white-100);
+  border-radius: 100vmax;
+  transition: all 0.3s;
+}
+.contact-grid .right-box .form-last-box .button:hover {
+  background-color: var(--white-100);
+  box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.15);
+}
+.contact-grid .right-box .form-last-box .button span {
+  font-size: 2.6rem;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.contact-grid .right-box .form-last-box .button:hover span {
+  color: var(--black-100);
+}
