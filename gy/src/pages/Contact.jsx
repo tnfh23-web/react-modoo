@@ -2,69 +2,48 @@ import "../style/Contact.css";
 import "aos/dist/aos.css";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AOS from "aos";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Contact() {
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const countTweens = [];
-
-    const playCount = (count) => {
-      if (!count || count.dataset.counted === "true") return;
-
-      count.dataset.counted = "true";
-
-      const target = Number(count.dataset.target);
-      const suffix = count.dataset.suffix || "";
-      const number = { value: 0 };
-
-      const tween = gsap.to(number, {
-        value: target,
-        duration: 1.8,
-        ease: "power2.out",
-        onUpdate: () => {
-          count.textContent = `${Math.floor(number.value).toLocaleString()}${suffix}`;
-        },
-      });
-
-      countTweens.push(tween);
-    };
-
-    const countObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-
-          entry.target
-            .querySelectorAll(".contact-count")
-            .forEach((count) => playCount(count));
-          countObserver.unobserve(entry.target);
-        });
-      },
-      {
-        threshold: 0.35,
-      }
-    );
-
-    sectionRef.current
-      ?.querySelectorAll(".left-bottom-box > div")
-      .forEach((item) => countObserver.observe(item));
-
     AOS.init({
-      duration: 850,
+      duration: 700,
       easing: "ease-out-cubic",
       once: true,
-      offset: 40,
+      offset: -80,
       anchorPlacement: "top-bottom",
     });
 
     requestAnimationFrame(() => AOS.refreshHard());
 
-    return () => {
-      countObserver.disconnect();
-      countTweens.forEach((tween) => tween.kill());
-    };
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray(".contact-count").forEach((count) => {
+        const target = Number(count.dataset.target);
+        const suffix = count.dataset.suffix || "";
+        const number = { value: 0 };
+
+        gsap.to(number, {
+          value: target,
+          duration: 1.8,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".left-bottom-box",
+            start: "top 78%",
+            once: true,
+          },
+          onUpdate: () => {
+            count.textContent = `${Math.floor(number.value).toLocaleString()}${suffix}`;
+          },
+        });
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -72,28 +51,28 @@ function Contact() {
       <div className="contact-grid flex">
         <div className=" left-box flex flex-between flex-col">
           <div className="left-top-box">
-            <div className="title-box" data-aos="fade-up" data-aos-delay="0">
+            <div className="title-box" data-aos="fade-up" data-aos-delay="0" data-aos-anchor=".contact-section">
               <h2 className="en title">Contact</h2>
             </div>
-            <div className="text-box" data-aos="fade-up" data-aos-delay="100">
+            <div className="text-box" data-aos="fade-up" data-aos-delay="80" data-aos-anchor=".contact-section">
               <p>제작 견적문의</p>
               <p>결과로 증명하는 디지털 경험을 함께 만듭니다.</p>
             </div>
           </div>
           <div className="left-bottom-box flex flex-col">
-            <div className="text-box-1" data-aos="fade-up" data-aos-delay="200">
+            <div className="text-box-1">
               <p className="text-1 contact-count" data-target="17">
                 0
               </p>
               <p className="en text-2">Years Experience</p>
             </div>
-            <div className="text-box-2" data-aos="fade-up" data-aos-delay="300">
+            <div className="text-box-2">
               <p className="text-1 contact-count" data-target="3236" data-suffix="+">
                 0
               </p>
               <p className="en text-2">Projects</p>
             </div>
-            <div className="text-box-3" data-aos="fade-up" data-aos-delay="400">
+            <div className="text-box-3">
               <p className="text-1 contact-count" data-target="382">
                 0
               </p>
@@ -103,7 +82,7 @@ function Contact() {
         </div>
         <div className="right-box">
           <form action="">
-            <div className="form-top-box flex" data-aos="fade-up" data-aos-delay="0">
+            <div className="form-top-box flex" data-aos="fade-up" data-aos-delay="0" data-aos-anchor=".contact-section">
               <label className="category-list flex-center">
                 <input id="HO" type="radio" name="category" />
                 <span className="en">Homepage</span>
@@ -121,7 +100,7 @@ function Contact() {
                 <span className="en">Solution</span>
               </label>
             </div>
-            <div className="form-cen-box" data-aos="fade-up" data-aos-delay="150">
+            <div className="form-cen-box" data-aos="fade-up" data-aos-delay="300" data-aos-anchor=".contact-section">
               <div className="cen-list-box cen-list-box-1 flex">
                 <div className="cen-list cen-list-1">
                   <div className="text-box">
@@ -165,7 +144,7 @@ function Contact() {
                 </div>
               </div>
             </div>
-            <div className="form-last-box" data-aos="fade-up" data-aos-delay="300">
+            <div className="form-last-box" data-aos="fade-up" data-aos-delay="500" data-aos-anchor=".contact-section">
               <div className="last-list flex flex-col">
                 <div className="text-box">
                   <p>문의 내용</p>
