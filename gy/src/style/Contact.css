@@ -99,7 +99,9 @@ input[type="radio"]:checked::before {
   box-sizing: border-box;
   border: 1px solid transparent;
   outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 .contact-grid input:focus,
 .contact-grid textarea:focus {
@@ -131,7 +133,9 @@ input[type="radio"]:checked::before {
   border-radius: 1rem;
   border: 1px solid transparent;
   outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 .contact-grid .right-box .form-last-box .last-list input::placeholder {
   color: #a5a5a5;
@@ -146,15 +150,21 @@ input[type="radio"]:checked::before {
   border-radius: 1rem;
   border: 1px solid transparent;
   outline: none;
-  transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: var(--font-kr);
+  font-size: 1.6rem;
+  font-weight: 500;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 .contact-grid .right-box .form-last-box .last-list textarea::placeholder {
+  font-family: var(--font-kr);
   color: #a5a5a5;
   font-size: 1.6rem;
   font-weight: 500;
 }
 .contact-grid .right-box .form-last-box .button-box {
-  margin-top: 4rem;
+  margin-top: 1.6rem;
 }
 .contact-grid .right-box .form-last-box .button {
   display: flex;
