@@ -78,7 +78,7 @@ function About() {
             stagger: 0.75,
             ease: "none",
           },
-          0
+          0,
         )
         .to(
           ".about-bar-fill",
@@ -87,7 +87,7 @@ function About() {
             duration: 2.5,
             ease: "none",
           },
-          0
+          0,
         );
 
       requestAnimationFrame(() => ScrollTrigger.refresh());

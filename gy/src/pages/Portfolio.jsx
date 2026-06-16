@@ -2,7 +2,7 @@ import "../style/Portfolio.css";
 import portimg1 from "../assets/img/portfolio_img/portfolio_img_1.png";
 import portimg2 from "../assets/img/portfolio_img/portfolio_img_2.png";
 import portimg3 from "../assets/img/portfolio_img/portfolio_img_3.png";
-import portimg4 from "../assets/img/portfolio_img/portfolio_img_4.png";
+import portimg4 from "../assets/img/portfolio_img/portfolio_img_4.jpeg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 

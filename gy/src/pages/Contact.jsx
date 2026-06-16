@@ -144,7 +144,7 @@ function Contact() {
                 </div>
               </div>
             </div>
-            <div className="form-last-box" data-aos="fade-up" data-aos-delay="500" data-aos-anchor=".contact-section">
+            <div className="form-last-box" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".contact-section">
               <div className="last-list flex flex-col">
                 <div className="text-box">
                   <p>문의 내용</p>
